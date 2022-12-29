@@ -3,13 +3,15 @@ from extensions import APIException, Convertor
 from config import TOKEN, exchanges
 import traceback
 
-/
+
 bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(commands=['start', 'help'])
 def start(message: telebot.types.Message):
-    text = "Приветствие!"
+    text = 'Чтобы начать работу введите команду боту в следующем формате:\n<имя валюты> \
+<в какую валюту перевести> \
+<количество переводимой валюты>\nУвидить список всех доступных валют: /values'
     bot.send_message(message.chat.id, text)
 
 
