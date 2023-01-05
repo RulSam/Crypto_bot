@@ -28,7 +28,7 @@ class Convertor:
         except ValueError:
             raise APIException(f'Не удалось обработать количество {amount}!')
 
-        r = requests.get(f'https://api.apilayer.com/exchangerates_data/latest?base={base_key}&base=symbols={sym_key}&apikey=4cFg0D3cy2TdP7oHKs9stn3LMd7p9wJ3')
+        r = requests.get(f'https://api.apilayer.com/exchangerates_data/latest?base={base_key}&base=symbols={sym_key}&apikey=Here your token key')
         resp = json.loads(r.content)
         new_price = resp['rates'][sym_key] * amount
         new_price = round(new_price, 3)
