@@ -8,3 +8,16 @@ To send requests to API, describe a class with static method get_price(), which 
 the name of the currency whose price to find out - base;
 The name of the currency whose price is to be found out - quote;
 the amount of currency to be converted - amount.
+Also you need to create config.py with lines 
+  
+TOKEN = 'your bot token'
+
+exchanges = {
+    'доллар': 'USD',
+    'евро': 'EUR',
+    'рубль': 'RUB',
+    'сум': 'UZS',
+    'лира': 'TRY',
+    'песо': 'ARS',
+    'кдоллар': 'CAD'
+}
